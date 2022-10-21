@@ -1,4 +1,3 @@
-i                                                     
 # Binaural Beats Generator
 Binaural beats are a form of auditory beat stimulation in which two tones, varying slightly in frequency, are played into each ear, producing an auditory illusion of a third tone. Binaural beats of certain frequencies have a modest, positive effect on memory, attention, pain perception, and relaxation.
 
