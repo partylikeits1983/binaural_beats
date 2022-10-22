@@ -42,15 +42,14 @@ function HeroHome() {
     oscillator_left.stop();
     oscillator_right.stop();
 
-    source.stop();
+    // source.stop();
   }
 
   const myArrayBuffer = audioCtx.createBuffer(
     2,
-    audioCtx.sampleRate * 120,
+    audioCtx.sampleRate * 360,
     audioCtx.sampleRate
   );
-
 
   const generatePink = () => {
     for (let channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
@@ -76,18 +75,15 @@ function HeroHome() {
     }
   }
 
-  generatePink();
+  // generatePink();
 
   const source = audioCtx.createBufferSource();
   const gainNode = audioCtx.createGain()
 
   const playNoise = () => {
+    generatePink();
 
     source.buffer = myArrayBuffer;
-    // connect the AudioBufferSourceNode to the
-    // destination so we can hear the sound
-    // source.connect(audioCtx.destination);
-    // start the source playing
 
     gainNode.connect(audioCtx.destination)
     gainNode.gain.value = 0
